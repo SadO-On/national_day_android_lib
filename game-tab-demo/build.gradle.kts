@@ -69,7 +69,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "studio.s98"
                 artifactId = "game_tab_demo"
-                version = "1.0.0"
+                version = "1.0.1"
                 from(components["release"])
             }
         }
