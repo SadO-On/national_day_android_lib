@@ -8,6 +8,7 @@ pluginManagement {
             }
         }
         mavenCentral()
+        mavenLocal()
         maven { url = uri("https://www.jitpack.io" ) }
         gradlePluginPortal()
     }
@@ -17,6 +18,7 @@ dependencyResolutionManagement {
     repositories {
         google()
         mavenCentral()
+        mavenLocal()
         maven { url = uri("https://www.jitpack.io" ) }
     }
 }
@@ -24,5 +26,5 @@ dependencyResolutionManagement {
 rootProject.name = "Tab-demo"
 include(":app")
 include(":game-tab-demo")
-include(":shared")
-include(":lib")
+include(":game-tab-demo:shared")
+include(":game-tab-demo:shared-lib")
