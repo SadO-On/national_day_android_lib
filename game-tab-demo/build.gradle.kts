@@ -42,7 +42,7 @@ android {
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     val nav_version = "2.7.7"
-    compileOnly(project(":shared"))
+    api(project(":shared"))
 
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
