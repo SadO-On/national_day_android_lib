@@ -42,7 +42,8 @@ android {
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     val nav_version = "2.7.7"
-    implementation(fileTree(mapOf("dir" to "libs", "include" to listOf("*.aar"))))
+    api(project(":shared"))
+
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
     implementation(composeBom)
@@ -69,7 +70,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "studio.s98"
                 artifactId = "game_tab_demo"
-                version = "1.0.1"
+                version = "1.0.2"
                 from(components["release"])
             }
         }

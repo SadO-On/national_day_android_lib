@@ -23,3 +23,4 @@ dependencyResolutionManagement {
 rootProject.name = "Tab-demo"
 include(":app")
 include(":game-tab-demo")
+include(":shared")
