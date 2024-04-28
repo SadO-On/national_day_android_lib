@@ -63,7 +63,10 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
-
+tasks.register<Copy>("copyLibs") {
+    from(configurations.getByName("api"))
+    into("libs")
+}
 afterEvaluate {
     publishing {
         publications {
