@@ -42,7 +42,7 @@ android {
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     val nav_version = "2.7.7"
-    api(project(":game-tab-demo:shared-lib"))
+    implementation("studio.98s:shared-tab-demo:1.0.0")
 
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
@@ -73,7 +73,7 @@ afterEvaluate {
             register<MavenPublication>("release") {
                 groupId = "studio.s98"
                 artifactId = "game_tab_demo"
-                version = "1.0.6"
+                version = "1.0.7"
                 from(components["release"])
             }
         }

@@ -27,4 +27,4 @@ rootProject.name = "Tab-demo"
 include(":app")
 include(":game-tab-demo")
 include(":game-tab-demo:shared")
-include(":game-tab-demo:shared-lib")
+
