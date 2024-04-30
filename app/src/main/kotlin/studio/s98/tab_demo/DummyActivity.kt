@@ -18,6 +18,7 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import studio.s98.game_tab_demo.GameActivity
+import studio.s98.game_tab_demo.GameNavigation
 
 class DummyActivity : ComponentActivity() {
 
