@@ -22,10 +22,10 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun PointsWidget(point: Int){
     val gradient = listOf(
-        Color(0xFF9D52BA),
-        Color(0xFF9D52BA),
-        Color(0xFF984FB3),
-        Color(0xFF944CAD),
+        Color(0xff59BCBE),
+        Color(0xff59BCBE),
+        Color(0xff52AFB4),
+        Color(0xff4BA4AB),
     )
     Box(
         modifier = Modifier
@@ -33,7 +33,7 @@ fun PointsWidget(point: Int){
             .height(45.dp)
             .border(
                 width = 2.dp,
-                color = Color(0xff803E8F),
+                color = Color(0xff103F5D),
                 shape = RoundedCornerShape(10.dp)
             )
             .background(

@@ -15,8 +15,10 @@ import androidx.compose.runtime.getValue
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalUriHandler
+import androidx.compose.ui.res.colorResource
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavController
@@ -42,7 +44,7 @@ fun HomeScreen(navController: NavController) {
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(mainBackground),
+            .background(colorResource(R.color.primary)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         ScaleAnimation(delayTime = 500) {
@@ -77,7 +79,7 @@ fun HomeScreen(navController: NavController) {
                 modifier = Modifier
                     .padding(bottom = 16.dp, top = 8.dp)
                     .clickable {
-                        uriHandler.openUri("https://twitter.com/98sStudio")
+                        uriHandler.openUri("https://www.98s.studio/en")
                     }
             )
         }

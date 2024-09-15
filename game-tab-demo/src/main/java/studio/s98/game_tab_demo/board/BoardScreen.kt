@@ -141,7 +141,7 @@ private fun BoardScreenContent(
 
     Column(
         modifier = Modifier
-            .background(mainBackground)
+            .background(Color(mainBackground))
             .fillMaxSize(),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
@@ -152,15 +152,15 @@ private fun BoardScreenContent(
                 modifier = Modifier.clickable {
                     onPause()
                 },
-                painter = painterResource(id = R.drawable.pause_btn),
+                painter = painterResource(id = R.drawable.pause),
                 contentDescription = "Pause button"
             )
 
         }
         Text(
-            text = "كل حرف يمثل 50 نقطة",
+           text = "كل كلمة وطنية تجدها تمثل ١٠٠ نقطة",
             fontWeight = FontWeight.ExtraBold,
-            color = Color(0xff9F4FC0),
+            color = Color.White,
             fontSize = 20.sp
         )
 
@@ -228,16 +228,7 @@ private fun BoardScreenContent(
             }
         }
         Spacer(modifier = Modifier.weight(1f))
-
         AnimatedFrames(modifier = Modifier.size(172.dp), feels)
-        Text(
-            text = "شعور التسعيني",
-            fontWeight = FontWeight.ExtraBold,
-            modifier = Modifier.offset(y = (-40).dp),
-            color = Color(0xff9F4FC0),
-            fontSize = 20.sp
-        )
-
     }
 
 }

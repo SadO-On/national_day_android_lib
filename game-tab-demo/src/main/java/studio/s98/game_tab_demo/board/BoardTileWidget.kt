@@ -62,9 +62,10 @@ private fun getColor(isOdd: Boolean, letter: Letter): Color {
     } else if (letter.isSelected) {
         0xff5CD5E5
     } else if (isOdd) {
-        0xff9C51B9
+        0xff256F6B
     } else {
-        0xffD57DF8
+        0xff43CDC2
+
     }
     return Color(colorHex)
 }

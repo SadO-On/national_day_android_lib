@@ -24,10 +24,10 @@ import androidx.compose.ui.unit.sp
 @Composable
 fun TimerWidget(percent: Float, time: String) {
     val gradient = listOf(
-        Color(0xFFF9F9F9),
-        Color(0xFFF9F9F9),
-        Color(0xFFEEE1F1),
-        Color(0xFF6E3179),
+        Color(0xFF81C1BE),
+        Color(0xFF81C1BE),
+        Color(0xFF76B4B4),
+        Color(0xFF6CA8AB),
     )
 
     Box(
@@ -37,7 +37,7 @@ fun TimerWidget(percent: Float, time: String) {
             .width(128.dp)
             .border(
                 width = 2.dp,
-                color = Color(0xff803E8F),
+                color = Color(0xff103F5D),
                 shape = RoundedCornerShape(10.dp)
             )
             .background(
@@ -55,7 +55,7 @@ fun TimerWidget(percent: Float, time: String) {
                 progress = percent/100f,
                 modifier = Modifier.fillMaxHeight(),
                 backgroundColor = Color.Transparent,
-                color = Color(0xffB862D1),
+                color = Color(0xff43CDC2),
             )
             Text(
                 text = time,

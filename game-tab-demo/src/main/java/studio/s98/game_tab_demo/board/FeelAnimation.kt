@@ -108,9 +108,9 @@ fun getDrawableId(frame: Int, context: Context, frameName: String, packageName: 
     return resourceId
 }
 
-const val IDLE = 191
-const val SLEEP = 214
-const val CORRECT = 80
+const val IDLE = 124
+const val SLEEP = 170
+const val CORRECT = 60
 
 const val IDLE_NAME = "idle_frame"
 const val SLEEP_NAME = "sleep_frame"

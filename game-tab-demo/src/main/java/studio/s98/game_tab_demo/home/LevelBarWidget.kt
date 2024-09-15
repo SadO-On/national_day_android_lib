@@ -25,11 +25,10 @@ fun LevelBarWidget(percent: Float) {
     val gradient = listOf(
         Color(0xFFF9F9F9),
         Color(0xFFF9F9F9),
-        Color(0xFFEEE1F1),
-        Color(0xFF6E3179),
+        Color(0xFFE3F2F2),
+        Color(0xffCEEBEB),
     )
 
-    Log.i("LevelWidgetContent", percent.toString())
 
     Row(
         modifier = Modifier
@@ -38,7 +37,7 @@ fun LevelBarWidget(percent: Float) {
             .height(45.dp)
             .border(
                 width = 2.dp,
-                color = Color(0xff803E8F),
+                color = Color(0xff4DBABC),
                 shape = RoundedCornerShape(10.dp)
             )
             .background(
@@ -54,7 +53,7 @@ fun LevelBarWidget(percent: Float) {
                 .fillMaxSize()
                 .clip(RoundedCornerShape(10.dp)),
             backgroundColor = Color.Transparent,
-            color = Color(0xffB862D1),
+            color = Color(0xff66C9CB),
         )
     }
 }

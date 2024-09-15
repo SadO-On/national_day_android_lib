@@ -20,6 +20,7 @@ import androidx.compose.runtime.mutableStateOf
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.platform.LocalLayoutDirection
 import androidx.compose.ui.res.painterResource
@@ -92,10 +93,10 @@ private fun getStarsRes(starCount: Int): Int {
 
 private fun getPhrasesRes(starCount: Int): Int {
     return when (starCount) {
-        1 -> R.drawable.phrase_1
-        2 -> R.drawable.phrase_2
-        3 -> R.drawable.phrase_3
-        else -> R.drawable.phrase_1
+        1 -> R.drawable.sad
+        2 -> R.drawable.kfo
+        3 -> R.drawable.legend
+        else -> R.drawable.sad
     }
 }
 
@@ -115,7 +116,7 @@ private fun ResultContent(
     Column(
         modifier = Modifier
             .fillMaxSize()
-            .background(mainBackground),
+            .background(Color(mainBackground)),
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
         BackButtonWidget {
@@ -143,7 +144,7 @@ private fun ResultContent(
                         if (starCount == 2)
                             shareImage(R.drawable.share_2, context)
                         else
-                            shareImage(R.drawable.share_3, context)
+                            shareImage(R.drawable.share_1, context)
 
                     },
                     contentDescription = ""
@@ -201,7 +202,7 @@ private fun ResultScreenPreview() {
     ResultContent(
         isShow = true,
         isWin = true,
-        phraseRes = R.drawable.phrase_3,
+        phraseRes = R.drawable.legend,
         starsRes = R.raw.two_star,
         onBackClicked = {},
         onDoneLottie = {},

@@ -1,6 +1,9 @@
 package studio.s98.game_tab_demo.home
 
+import android.content.ContentResolver
 import android.graphics.Color
+import android.net.Uri
+import android.view.Surface
 import androidx.annotation.OptIn
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.runtime.Composable
@@ -10,6 +13,7 @@ import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.viewinterop.AndroidView
+import androidx.core.content.pm.ShortcutInfoCompat
 import androidx.lifecycle.Lifecycle
 import androidx.media3.common.MediaItem
 import androidx.media3.common.Player.STATE_ENDED
@@ -28,7 +32,10 @@ fun StarterVideoPlayer() {
     val context = LocalContext.current
 
     val exoPlayer = ExoPlayer.Builder(context).build()
-    val uri = RawResourceDataSource.buildRawResourceUri(R.raw.starter)
+    val uri = Uri.Builder()
+        .scheme(ContentResolver.SCHEME_ANDROID_RESOURCE)
+        .path(R.raw.starter.toString())
+        .build()
     val mediaSource = remember(uri) {
         MediaItem.fromUri(uri)
     }
@@ -63,7 +70,7 @@ fun StarterVideoPlayer() {
         factory = { ctx ->
             PlayerView(ctx).apply {
                 player = exoPlayer
-                setShutterBackgroundColor(Color.parseColor("#D1B4DC"))
+                setShutterBackgroundColor(Color.parseColor("#37918A"))
                 controllerAutoShow = false
                 useController = false
                 hideController()
