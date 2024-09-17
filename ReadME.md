@@ -42,7 +42,7 @@ In your `build.gradle` file, add the following dependency:
 
 ```gradle
 dependencies {
-    implementation 'com.github.SadO-On:Android-Tab-demo:1.1.0'
+  implementation 'com.github.SadO-On:98s-saudi-national-day-game-android:1.0.0'
 }
 ```
 ## 🚀 Using Our Package in Your App
