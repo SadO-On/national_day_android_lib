@@ -42,7 +42,7 @@ In your `build.gradle` file, add the following dependency:
 
 ```gradle
 dependencies {
-  implementation 'com.github.SadO-On:98s-saudi-national-day-game-android:1.0.0'
+	implementation 'com.github.SadO-On:98s-saudi-national-day-game-android:2.0.1'
 }
 ```
 ## 🚀 Using Our Package in Your App
@@ -90,3 +90,7 @@ In case of version conflicts with existing dependencies in your project, follow 
 3. Update the conflicting dependencies in your project accordingly.
 
 If issues persist, reach out to us for personalized assistance. [Contact us here](https://www.98s.studio/).
+
+## License
+
+This project is licensed under the **MIT License**. See the [LICENSE](./LICENSE) file for more details.
