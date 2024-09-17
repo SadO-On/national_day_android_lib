@@ -5,7 +5,7 @@ plugins {
 }
 
 android {
-    namespace = "studio.s98.game_tab_demo"
+    namespace = "studio.s98.national_day_android_lib"
     compileSdk = 34
 
     defaultConfig {
@@ -42,7 +42,7 @@ android {
 dependencies {
     val composeBom = platform("androidx.compose:compose-bom:2024.04.01")
     val nav_version = "2.7.7"
-    implementation("studio.98s:shared-tab-demo:1.0.1")
+    implementation("studio.98s:shared_national_day:1.0.0")
 
 
     implementation("androidx.navigation:navigation-compose:$nav_version")
@@ -72,8 +72,8 @@ afterEvaluate {
         publications {
             register<MavenPublication>("release") {
                 groupId = "studio.s98"
-                artifactId = "game_tab_demo"
-                version = "1.1.0"
+                artifactId = "studio.s98.national_day_android_lib"
+                version = "1.0.0"
                 from(components["release"])
             }
         }
