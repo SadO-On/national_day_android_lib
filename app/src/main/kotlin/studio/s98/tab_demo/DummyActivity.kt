@@ -2,6 +2,8 @@ package studio.s98.tab_demo
 
 import android.content.Intent
 import android.os.Bundle
+import android.os.PersistableBundle
+import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.foundation.layout.Arrangement
@@ -17,12 +19,17 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 import studio.s98.game_tab_demo.GameActivity
+import studio.s98.game_tab_demo.GameNavigation
 
 class DummyActivity : ComponentActivity() {
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
+        Log.i("shared-pref", this.applicationContext.getSharedPreferences("", MODE_PRIVATE).getInt("level", -1).toString())
+        Log.i("shared-pref", this.applicationContext.getSharedPreferences("", MODE_PRIVATE).getInt("xp", -1).toString())
+
         setContent {
             Surface {
                 Column(
