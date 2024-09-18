@@ -6,6 +6,11 @@ plugins {
 
 android {
     namespace = "studio.s98.national_day_android_lib"
+    publishing {
+        singleVariant("release") {
+            withSourcesJar()
+        }
+    }
     compileSdk = 34
 
     defaultConfig {
@@ -84,7 +89,7 @@ afterEvaluate {
                     description.set("NationalDayAndroidLib: A game library for Saudi national day")
                     url.set("https://github.com/SadO-On/98s-saudi-national-day-game-android.git")
                     inceptionYear.set("2024")
-
+                    version = "1.0.0"
                     licenses {
                         license {
                             name.set("MIT License")
@@ -93,7 +98,7 @@ afterEvaluate {
                     }
                     issueManagement {
                         system.set("Github")
-                        url.set("https://github.com/SadO-On/word-finder-game/issues")
+                        url.set("https://github.com/SadO-On/98s-saudi-national-day-game-android/issues")
                     }
                     developers {
                         developer {
