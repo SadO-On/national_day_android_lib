@@ -63,19 +63,4 @@ dependencies {
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
 }
-tasks.register<Copy>("copyLibs") {
-    from(configurations.getByName("api"))
-    into("libs")
-}
-afterEvaluate {
-    publishing {
-        publications {
-            register<MavenPublication>("release") {
-                groupId = "studio.s98"
-                artifactId = "national_day_android_lib"
-                version = "2.0.2"
-                from(components["release"])
-            }
-        }
-    }
-}
+
