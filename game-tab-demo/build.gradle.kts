@@ -72,8 +72,8 @@ afterEvaluate {
         publications {
             register<MavenPublication>("release") {
                 groupId = "studio.s98"
-                artifactId = "studio.s98.national_day_android_lib"
-                version = "1.0.0"
+                artifactId = "national_day_android_lib"
+                version = "2.0.2"
                 from(components["release"])
             }
         }
