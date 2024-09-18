@@ -81,7 +81,7 @@ afterEvaluate {
                 from(components["release"])
                 groupId = "studio.98s"
                 artifactId = "national_day_android_lib"
-                version = "1.0.0"
+                version = "1.0.2"
                 artifact(javadocJar)
                 pom {
                     packaging = "aar"
@@ -89,7 +89,7 @@ afterEvaluate {
                     description.set("NationalDayAndroidLib: A game library for Saudi national day")
                     url.set("https://github.com/SadO-On/98s-saudi-national-day-game-android.git")
                     inceptionYear.set("2024")
-                    version = "1.0.0"
+                    version = "1.0.2"
                     licenses {
                         license {
                             name.set("MIT License")
