@@ -2,7 +2,6 @@ package studio.s98.tab_demo
 
 import android.content.Intent
 import android.os.Bundle
-import android.os.PersistableBundle
 import android.util.Log
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
@@ -18,8 +17,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import studio.s98.game_tab_demo.GameActivity
-import studio.s98.game_tab_demo.GameNavigation
+import studio.s98.national_day_android_lib.GameActivity
 
 class DummyActivity : ComponentActivity() {
 

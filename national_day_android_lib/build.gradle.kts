@@ -64,14 +64,51 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
+
+val javadocJar = tasks.register("javadocJar", Jar::class.java) {
+    archiveClassifier.set("javadoc")
+}
+
 afterEvaluate {
     publishing {
         publications {
             create<MavenPublication>("release") {
                 from(components["release"])
-                groupId = "com.github.SadO-On"
+                groupId = "studio.98s"
                 artifactId = "national_day_android_lib"
                 version = "1.0.0"
+                artifact(javadocJar)
+                pom {
+                    packaging = "aar"
+                    name.set("NationalDayAndroidLib")
+                    description.set("NationalDayAndroidLib: A game library for Saudi national day")
+                    url.set("https://github.com/SadO-On/98s-saudi-national-day-game-android.git")
+                    inceptionYear.set("2024")
+
+                    licenses {
+                        license {
+                            name.set("MIT License")
+                            url.set("https://opensource.org/licenses/MIT")
+                        }
+                    }
+                    issueManagement {
+                        system.set("Github")
+                        url.set("https://github.com/SadO-On/word-finder-game/issues")
+                    }
+                    developers {
+                        developer {
+                            id.set("98's Studio")
+                            name.set("Mohammed Waleed")
+                            email.set("sadondeveloper@gmail.com")
+                        }
+                    }
+
+                    scm {
+                        connection.set("scm:git@github.com:SadO-On/98s-saudi-national-day-game-android")
+                        developerConnection.set("scm:git@github.com:SadO-On/98s-saudi-national-day-game-android.git")
+                        url.set("https://github.com/SadO-On/98s-saudi-national-day-game-android.git")
+                    }
+                }
             }
         }
     }
