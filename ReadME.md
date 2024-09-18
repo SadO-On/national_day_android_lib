@@ -42,7 +42,7 @@ In your `build.gradle` file, add the following dependency:
 
 ```gradle
 dependencies {
-	implementation 'com.github.SadO-On:98s-saudi-national-day-game-android:2.0.1'
+	implementation 'com.github.SadO-On:national_day_android_lib:1.0.2'
 }
 ```
 ## 🚀 Using Our Package in Your App
