@@ -25,6 +25,5 @@ dependencyResolutionManagement {
 
 rootProject.name = "Tab-demo"
 include(":app")
-include(":game-tab-demo")
-include(":game-tab-demo:shared")
+include(":national_day_android_lib")
 

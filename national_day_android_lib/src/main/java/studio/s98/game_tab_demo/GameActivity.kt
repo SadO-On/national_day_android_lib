@@ -8,6 +8,7 @@ import androidx.activity.compose.setContent
 
 import androidx.core.content.ContextCompat
 import androidx.core.view.WindowCompat
+import studio.s98.national_day_android_lib.R
 
 class GameActivity : ComponentActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

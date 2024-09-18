@@ -64,3 +64,15 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 }
 
+afterEvaluate {
+    publishing {
+        publications {
+            create<MavenPublication>("release") {
+                from(components["release"])
+                groupId = "com.github.SadO-On"
+                artifactId = "national_day_android_lib"
+                version = "1.0.0"
+            }
+        }
+    }
+}
